@@ -6,7 +6,11 @@
 <style>
 /* 모바일용 스타일지정 시작 */
 span {
-display:inline-block; height:10px; width:50px; background-color:red;
+display:block; height:10px; width:50px; background-color:red;
+margin-bottom:10px;
+}
+#wrap .slider img { /* Cascade Stlye Sheet 특징 계단형 스타일지정 */
+width:100%;
 }
 /* 모바일용 스타일지정 끝 */
 </style>
@@ -28,16 +32,24 @@ display:inline-block; height:10px; width:50px; background-color:red;
 <span></span>
 <span></span>
 <span></span>
-HOME
-WE ARE
-WORK
-BLOG
-CONTACT US
+<!-- 리스트를 보여주는 태그 ul(UnOrdered List *.~,*.~) ol(Ordered List 1.~,2.~) -->
+<ul>
+<li>HOME</li>
+<li>WE ARE</li>
+<li>WORK</li>
+<li>BLOG</li>
+<li>CONTACT US</li>
+</ul>
 <!-- 상단 로고와 햄버거 메뉴영역 끝 -->
 </header>
 <section><!-- division 디비전이라는 영역표시 태그 -->
 <!-- 본문슬라이드 영역 시작 -->
-슬라이드이미지1
+<!-- 이미지를 불러오는 태그 img -->
+<!-- 경로:상대(./img/...), 절대경로(/resources/sample/img/...) -->
+<!-- 태그 안쪽에 지정한 스타일을 인라인스타일 -->
+<div class="slider">
+   <img src="/resources/sample/img/seoul.jpg" alt="서울 이미지입니다.">
+</div>
 <!-- 본문슬라이드 영역 끝 -->
 </section>
 <footer>
