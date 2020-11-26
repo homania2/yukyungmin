@@ -1,5 +1,10 @@
 @charset "UTF-8";
 /* 모바일용 스타일지정 시작 */
+body {
+background:#fff;
+font-size:14px;
+line-height:1.4;
+}
 /* 헤더영역 시작 */
 .header {
 height:100px;
@@ -58,14 +63,19 @@ font-size:14px;
 color:#fff;
 }
 /* 헤더영역 끝 */
+
 /* 본문섹션 슬라이드영역 시작 */
 #wrap .slider img { /* Cascade Stlye Sheet 특징 계단형 스타일지정 */
 width:100%;
 }
+.carousel-item, .carousel-item img {
+height:300px;
+}
 /* 본문섹션 슬라이드영역 끝 */
-/* 푸터영영 시작 */
+
+/* 푸터영역 시작 */
 .footer {
-margin-top:30px;
+padding-top:30px;
 }
 .footer p {
 margin:21px 0px;
@@ -73,4 +83,180 @@ color:#3f51b5;
 text-align:center; /* 문장내용을 가로 가운데 정렬 */
 }
 /* 푸터영영 끝*/
+
+/* we are 페이지 시작 */
+.weare-header {
+margin-top:30px;
+text-align:center;
+}
+.section-title {
+margin-bottom:30px;
+font-size:42px;
+color:#3f51b5;
+font-weight:normal;
+letter-spacing:5px;  /* 글자사이 간격추가 */
+}
+.weare-header p {
+color:#616161;
+line-height:1.9;    /* 줄간격 단위 1.9 글자크기의 1.9 배수 */
+font-size:14px;
+}
+.weare-body {
+margin-top:68px;
+}
+.weare-body li {
+text-align:center;
+margin-top:50px;
+}
+.weare-body li img {
+height:220px;  /* 이미지는 가로든 세로든 1쪽 크기를 지정하면, 비율을 유지하면서 크기가 조정됩니다. */
+}
+.weare-body li h2 {
+margin:20px 0px;
+font-size:30px;
+font-weight:normal;
+color:#3f51b5;
+}
+.weare-body li p {
+font-size:14px;
+}
+/* we are 페이지 끝 */
+
+/* work 영역 시작 */
+.work-section {
+text-align:center;
+margin-top:30px;
+}
+.work-section li img {
+width:100%;
+}
+.work-section li a {
+display:block;
+width:100%;
+height:100%;
+position:relative;
+}
+.work-section li a::before{
+display:block;
+background:#3f51b5;
+position:absolute;
+width:100%;
+height:100%;
+top:0px;
+left:0px;
+content:"";
+opacity:0;
+}
+.work-section li a:hover::before {
+opacity:0.4;
+}
+.work-section .info {
+display:block;
+position:absolute;
+color:#fff;
+text-align:left;
+opacity:0;
+transition:all 0.3s;
+}
+.work-section li a:hover .info {
+opacity:1;
+transform:translateY(20px);
+}
+.info h2 {
+font-size:26px;
+font-weight:normal;
+}
+.info p {
+font-size:14px;
+padding:10px 0px;
+}
+/* work 영역 끝 */
+
+/* blog 영역 시작 */
+.blog-section {
+margin-top:30px;
+}
+.blog-section h1 {
+text-align:center;
+font-size:42px;
+color:#3f51b5;
+font-weight:normal;
+}
+.blog-section .container {
+width:90%;
+margin:0 auto;
+}
+.blog-section li {
+margin-top:30px;
+}
+.blog-section li img {
+width:100%;
+}
+.blog-section li time {
+display:block;
+margin:10px 0px;
+font-size:12px;
+color:#888;
+}
+.blog-section li h2 {
+color:#424242;
+font-weight:normal;
+line-height:1.6;
+}
+.blog-section hr {
+display:block;
+height:1px;
+background:#3f51b5;
+}
+/* blog 영역 끝 */
+
+/* contact 영역 시작 */
+.contact-section {
+margin-top:30px;
+}
+.contact-section h1 {
+font-size:42px;
+text-align:center;
+color:#3f51b5;
+font-weight:normal;
+}
+.contact-section .container {
+width:90%;
+margin:0px auto;
+margin-top:30px;
+}
+.contact-section label {
+display:none;
+}
+.contact-section form input {
+width:100%;
+line-height:1.2;
+padding:0 2px;
+height:40px;
+border:none;
+border-bottom:1px solid #ccc;
+background:transparent;
+}
+.contact-section form textarea {
+width:100%;
+background:transparent;
+line-height:1.2;
+border:none;
+border-bottom:1px solid #ccc;
+min-height:100px;
+padding-top:10px;
+padding-bottom:10px;
+}
+.contact-section form button {
+padding:15px;
+font-size:12px;
+background:#3f51b5;
+color:#fff;
+border:0px;
+}
+.submit-btn {
+margin-top:10px;
+text-align:right;
+}
+/* contact 영역 끝 */
 /* 모바일용 스타일지정 끝 */
