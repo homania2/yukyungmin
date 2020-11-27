@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html><!-- 현재문서의 형태선언 -->
 <html><!-- html문서는 <태그열고 ~태그닫고> -->
 <head><!-- 문서내용과는 관계없는 문서정보가 들어있고, 메타정보가 존재 -->
@@ -5,25 +8,38 @@
 <!-- 반응형을 작동하기 위해서 사용하는 메타태그 뷰포트는 모니터, 모바일액정, 프린터 -->
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 <title>반응형 홈페이지</title><!-- 문서의 제목을 브라우저상단왼쪽에 표시 -->
+<!-- 외부 자바스크립트 불러오는 태그(아래) -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="/resources/sample/js/user.js"></script>
 <!-- 외부 css파일 불러오는 태그(아래) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <link rel="stylesheet" href="/resources/sample/css/reset.css" type="text/css">
 <link rel="stylesheet" href="/resources/sample/css/mobile.css" type="text/css">
 <link rel="stylesheet" href="/resources/sample/css/tablet.css" type="text/css">
 <link rel="stylesheet" href="/resources/sample/css/pc.css" type="text/css">
-<!-- 외부 자바스크립트 불러오는 태그(아래) -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="/resources/sample/js/user.js"></script>
+
 <!-- span 자리를 차지하지 않는 영역 한뼘, px 픽셀 = 화면에 표시되는 크기의 단위 -->
 <!-- :콜론(속성:값, key:Value), ;세미콜론(문장의 끝) -->
 <style>
+
+/* 여기까지는 모바일용-아래부터는 태블릿용, pc용 @미디어쿼리사용-메타태그viewport사용필수 */
 /* pc용 스타일 시작 */
 @media all and (min-width:1132px) {
 
 }
+
 /* pc용 스타일 끝 */
 </style>
 <script>
 /* 자바스크립트 시작 */
+$(document).ready(function($) {
+   $('.carousel').carousel({
+    		  interval: 1000,
+    		  pause: false
+    	})
+    });
 
 /* 자바스크립트 끝 */
 </script>
@@ -33,7 +49,7 @@
       <header class="header">
       <!-- 상단 로고와 햄버거 메뉴영역 시작 -->
          <h1 class="logo">
-            <a href="index.html">LOGO</a>      <!-- a태그는 링크역할, href헤르프 속성값에 URL을 입력해서 이동 -->
+            <a href="/">LOGO</a>      <!-- a태그는 링크역할, href헤르프 속성값에 URL을 입력해서 이동 -->
          </h1><!-- 제목태그 헤드라인글자를 표시 h1~h6 -->
          <div class="menu-toggle-btn">
             <span></span>
@@ -47,47 +63,12 @@
          <nav class="gnb"> <!-- GNB:글로벌네비게이션 :전체영역 메뉴 -->
          <!-- 리스트를 보여주는 태그 ul(UnOrdered List *.~,*.~) ol(Ordered List 1.~,2.~) -->
             <ul>
-               <li><a href="index.html">HOME</a></li>
-               <li><a href="weare.html">WE ARE</a></li>
-               <li><a href="work.html">WORK</a></li>
-               <li><a href="blog.html">BLOG</a></li>
-               <li><a href="contact.html">CONTACT US</a></li>
+               <li><a href="/">HOME</a></li>
+               <li><a href="/weare">WE ARE</a></li>
+               <li><a href="/work">WORK</a></li>
+               <li><a href="/blog">BLOG</a></li>
+               <li><a href="/contact">CONTACT US</a></li>
             </ul>
          </nav>
       <!-- 상단 로고와 햄버거 메뉴영역 끝 -->
       </header>
-
-      <section class="contact-section"><!-- division 디비전이라는 영역표시 태그 -->
-         <h1>CONTACT</h1>
-         <div class="container">
-         <form name="message_form" action="contact.html" method="get">
-         <fieldset>
-         <legend>현재폼의타이틀영역입니다.</legend>
-         <div class="input-class">
-            <label for="name">이름</label>
-            <input name="name" id="name" type="text" placeholder="이름을 입력">
-            <label for="phone">연락처</label>
-            <input name="phone" id="phone" type="text" placeholder="연락처를 입력">
-            <label for="email">이메일</label>
-            <input name="email" id="email" type="text" placeholder="email을 입력">
-         </div>
-         <div class="textarea-class">
-            <label for="message">메세지</label>
-            <textarea name="message" id="message" placeholder="내용을 입력"></textarea>
-         </div>
-         </fieldset>
-         <div class="submit-btn">
-         <button type="submit">메세지보내기</button>
-         </div>
-         </form>
-         </div>
-      </section>
-
-      <footer class="footer float-clear">
-      <!-- 하단 로고 영역 시작 -->
-      <p>LOGO</p> <!-- 문장영역을 의미하는 paragraph 태그입니다. -->
-      <!-- 하단 로고 영역 끝 -->
-      </footer>
-   </div>
-</body>
-</html>
