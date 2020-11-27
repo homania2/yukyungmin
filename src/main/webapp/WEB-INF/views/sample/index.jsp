@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!-- jsp: JavaServerPage 자바서버용페이지 -->
 <!--  jsp에서 자바프로그램을 사용할때 쓰는 태그 꺽쇠% -->
 
@@ -12,6 +13,8 @@ org.edu.controller 패키지명: 자바클래스가 있는 폴더 경로를 말�
 패키지를 사용하는 이유 : 자바클래스를 기능별로 묶어놓기 위해서 명시적으로 만든 묶음.<br> -->
 
 <%@ include file="./include/header.jsp" %>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
 
       <section><!-- division 디비전이라는 영역표시 태그 -->
       <!-- 본문슬라이드 영역 시작 -->

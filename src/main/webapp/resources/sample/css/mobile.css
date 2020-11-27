@@ -5,6 +5,10 @@ background:#fff;
 font-size:14px;
 line-height:1.4;
 }
+ul {
+margin-bottom:inherit !important;
+}
+
 /* 헤더영역 시작 */
 .header {
 height:100px;

@@ -22,6 +22,23 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
+	@RequestMapping(value="/contact", method = RequestMethod.POST)
+	public String contact_send() {
+		//데이터 전송후에 다른 페이지이동이 필요. 새로고침을 방지하기 위해, 게시판테러 방지
+		return "redirect:/blog";
+	}
+	@RequestMapping(value="/contact", method = RequestMethod.GET)
+	public String contact() {
+		return "sample/contact";
+	}
+	@RequestMapping(value="/blog", method = RequestMethod.GET)
+	public String blog() {
+		return "sample/blog";
+	}
+	@RequestMapping(value="/work", method = RequestMethod.GET)
+	public String work() {
+		return "sample/work";
+	}
 	@RequestMapping(value="/weare", method = RequestMethod.GET)
 	public String weare() {
 		//외부에서 /weare 경로로 접근했을떄, sample/weare.jsp와 매칭시키라는 의미
