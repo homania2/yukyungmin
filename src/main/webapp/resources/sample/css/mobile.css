@@ -83,10 +83,10 @@ height:300px;
 /* 푸터영역 시작 */
 .footer {
 padding-top:30px;
-text-align:center; /* 문장내용을 가로 가운데 정렬 */
+text-align:center; /* footer p 에서 문자 가운데정렬이 되지않아 footer로 이동 */
 }
 .footer p {
-display:inline;
+display:inline; /* 백그라운드컬러 영역이 너무넓어 인라인요소로 변경  */
 margin:21px 0;
 color:#3f51b5;
 background:#ADFF2F;
