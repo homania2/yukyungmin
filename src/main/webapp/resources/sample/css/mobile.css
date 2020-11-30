@@ -1,10 +1,12 @@
 @charset "UTF-8";
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
 /* 모바일용 스타일지정 시작 */
 body {
 background:#fff;
 font-size:14px;
 line-height:1.4 !important;
-font-family: 'Malgun Gothic', dotum, sans-serif !important;
+font-family: 'Nanum Gothic', 'Nanum Gothic' !important;
 }
 ul {
 margin-bottom:inherit !important;
@@ -83,9 +85,11 @@ height:300px;
 padding-top:30px;
 }
 .footer p {
-margin:21px 0px;
+display:inline;
+margin:21px 50%;
 color:#3f51b5;
 text-align:center; /* 문장내용을 가로 가운데 정렬 */
+background:#ADFF2F;
 }
 /* 푸터영영 끝*/
 
