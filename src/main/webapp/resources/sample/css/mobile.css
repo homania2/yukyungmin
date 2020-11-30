@@ -83,10 +83,11 @@ height:300px;
 /* 푸터영역 시작 */
 .footer {
 padding-top:30px;
+text-align:center;
 }
 .footer p {
 display:inline;
-margin:21px 50%;
+margin:21px 0;
 color:#3f51b5;
 text-align:center; /* 문장내용을 가로 가운데 정렬 */
 background:#ADFF2F;
